@@ -1,4 +1,4 @@
-# Note
+# This is README
 
 This is my journal on solving Leetcode problems using Golang.
 
