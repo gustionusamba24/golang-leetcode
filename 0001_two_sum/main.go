@@ -17,7 +17,8 @@ func twoSum(nums []int, target int) []int {
 
 	for i, num := range nums {
 		numberToFind := target - num
-		if hashMapIndex, ok := hashMap[numberToFind]; ok {
+		hashMapIndex, ok := hashMap[numberToFind]
+		if ok {
 			return []int{hashMapIndex, i}
 		}
 		hashMap[num] = i
