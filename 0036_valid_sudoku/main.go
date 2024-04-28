@@ -31,8 +31,8 @@ func isValidSudoku(board [][]byte) bool {
 			}
 
 			xSet[row][currentValue] = true
-			ySet[row][currentValue] = true
-			squareSet[row][currentValue] = true
+			ySet[col][currentValue] = true
+			squareSet[boxIndex][currentValue] = true
 		}
 	}
 	return true
