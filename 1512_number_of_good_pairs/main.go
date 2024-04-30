@@ -4,11 +4,11 @@ import "fmt"
 
 func main() {
 	case1 := []int{1, 2, 3, 1, 1, 3}
-	result := goodPairsCount(case1)
+	result := numIdenticalPairs(case1)
 	fmt.Println(result)
 }
 
-func goodPairsCount(nums []int) int {
+func numIdenticalPairs(nums []int) int {
 	// write code here
 	total := 0
 	for i := 0; i < len(nums); i++ {
