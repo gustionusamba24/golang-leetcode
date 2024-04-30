@@ -3,15 +3,20 @@ package main
 import "fmt"
 
 func main() {
-	input := []int{3, 0, 1}
-	result := missingNumber(input)
+	case1 := []int{1, 2, 3, 1, 1, 3}
+	result := goodPairsCount(case1)
 	fmt.Println(result)
 }
 
-func missingNumber(nums []int) int {
-	arraySum := 0
-	for _, num := range nums {
-		arraySum += num // 4
+func goodPairsCount(nums []int) int {
+	// write code here
+	total := 0
+	for i := 0; i < len(nums); i++ {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[i] == nums[j] {
+				total++
+			}
+		}
 	}
-	return (len(nums) * (len(nums) + 1) / 2) - arraySum // (3 * 4 / 2) - 4
+	return total
 }
